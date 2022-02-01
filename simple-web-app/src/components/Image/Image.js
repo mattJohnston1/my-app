@@ -2,14 +2,16 @@ import LoadSpinner from "../Loader/LoadSpinner";
 import { useEffect, useState } from "react";
 import './Image.css';
 
-function Image({isLoading, setIsLoading, image, setImage}) {
+function Image({isLoading, setIsLoading, image, setImage, setError}) {
 
     useEffect(() => {
-        console.log("lkajgddlkjaklgjasljkldgskljdsagjlksdjlakgljkdsgaklj")
-        fetch('http://localhost:5000')
+        fetch('http://localhost:8080')
           .then((response) => {
+            console.log(response)
             if (response.status == 200) {
               return response.json()
+            } else {
+              setError(`Error Code ${response.status}: Please Try Again.`)
             }
           })
           .then((data) => {

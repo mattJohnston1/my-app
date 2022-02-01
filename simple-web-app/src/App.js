@@ -12,7 +12,7 @@ function App() {
   
   return (
     <main className="main">
-      <Image isLoading={isLoading} setIsLoading={setIsLoading} image={image} setImage={setImage}/>
+      <Image isLoading={isLoading} setIsLoading={setIsLoading} image={image} setImage={setImage} setError={setError}/>
       <NewImageButton setIsLoading={setIsLoading} setImage={setImage} setError={setError}/>
       {error.length > 0 && <ImageError error={error} setError={setError}/>}
     </main>
