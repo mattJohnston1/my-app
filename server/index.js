@@ -16,6 +16,7 @@ app.get('/', (req, res) => {
         res.status(200)
         res.json(response.data.file)
       } else {
+        res.status(response.status)
         throw new Error('Oops! Something went wrong')
       }
     })
@@ -23,7 +24,7 @@ app.get('/', (req, res) => {
       console.error(error)
     })
 })
-
-app.listen(5000, () => {
-  console.log('server started');
+const PORT = 8080;
+app.listen(PORT, () => {
+  console.log('server started on port ' + PORT);
 });
