@@ -1,0 +1,6 @@
+img, .image {
+    width: 300px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
