@@ -1,4 +1,4 @@
-To install from github (using ssh key)
+To install from github (using ssh)
 ```
 git clone git@github.com:mattJohnston1/my-app.git
 cd my-app
