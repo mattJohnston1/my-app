@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     .then((response) => {
       if (response.status == 200) {
         res.status(200)
-        res.json(response.data.file)
+        res.json({url: response.data.file})
       } else {
         res.status(response.status)
         throw new Error('Oops! Something went wrong')
@@ -24,6 +24,8 @@ app.get('/', (req, res) => {
       console.error(error)
     })
 })
+
+
 const PORT = 8080;
 app.listen(PORT, () => {
   console.log('server started on port ' + PORT);
