@@ -2,6 +2,7 @@ const express = require('express');
 const axios = require('axios')
 
 
+
 const app = express();
 
 app.use(function (req, res, next) {
@@ -14,8 +15,9 @@ app.get('/', (req, res) => {
     .then((response) => {
       if (response.status == 200) {
         res.status(200)
-        res.json(response.data.file)
+        res.json({url: response.data.file})
       } else {
+        res.status(response.status)
         throw new Error('Oops! Something went wrong')
       }
     })
@@ -24,6 +26,8 @@ app.get('/', (req, res) => {
     })
 })
 
-app.listen(5000, () => {
-  console.log('server started');
+
+const PORT = 8080;
+app.listen(PORT, () => {
+  console.log('server started on port ' + PORT);
 });

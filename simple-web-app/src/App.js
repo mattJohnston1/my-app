@@ -12,9 +12,15 @@ function App() {
   
   return (
     <main className="main">
+<<<<<<< HEAD
       <Image isLoading={isLoading} setIsLoading={setIsLoading} image={image} setImage={setImage}/>
       <NewImageButton setIsLoading={setIsLoading} setImage={setImage}/>
       {/* {error.length > 0 && <ImageError error={error} setError={setError}/>} */}
+=======
+      <Image isLoading={isLoading} setIsLoading={setIsLoading} image={image} setImage={setImage} setError={setError}/>
+      <NewImageButton setIsLoading={setIsLoading} setImage={setImage} setError={setError}/>
+      {error.length > 0 && <ImageError error={error} setError={setError}/>}
+>>>>>>> b22957b2ca9fcf19410a290ec1adce33485bb48d
     </main>
   );
 }
