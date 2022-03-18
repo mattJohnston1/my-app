@@ -2,7 +2,6 @@ import LoadSpinner from "../Loader/LoadSpinner";
 import { useEffect } from "react";
 import './Image.css';
 
-
 function Image({isLoading, setIsLoading, image, setImage, setError}) {
 
     useEffect(() => {
