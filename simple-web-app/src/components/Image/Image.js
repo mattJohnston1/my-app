@@ -28,4 +28,5 @@ function Image({isLoading, setIsLoading, image, setImage, setError}) {
 }
 
 
+
 export default Image;
